@@ -1,0 +1,55 @@
+/* login.css - Styles for login page */
+.login-container {
+    max-width: 400px;
+    margin: 3rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-container h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: none;
+  }
+  
+  #login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  #login-form label {
+    font-weight: 600;
+    color: var(--primary);
+  }
+  
+  #login-form input {
+    padding: 0.75rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  #login-form button {
+    margin-top: 1rem;
+  }
+  
+  #login-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  #login-message.success {
+    background-color: rgba(72, 187, 120, 0.2);
+    color: var(--success);
+  }
+  
+  #login-message.error {
+    background-color: rgba(245, 101, 101, 0.2);
+    color: var(--danger);
+  }

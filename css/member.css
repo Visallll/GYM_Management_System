@@ -1,0 +1,145 @@
+/* member.css - Styles for member page */
+.membership-options, 
+.schedule-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.membership-options .card, 
+.schedule-options .card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 2px solid var(--gray-light);
+}
+
+.membership-options .card:hover, 
+.schedule-options .card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.membership-options h4, 
+.schedule-options h4 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.membership-options .price, 
+.schedule-options .price {
+  font-weight: bold;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.membership-options ul, 
+.schedule-options ul {
+  margin-bottom: 1.5rem;
+}
+
+.membership-options ul li, 
+.schedule-options ul li {
+  background: none;
+  padding: 0.25rem 0;
+  margin: 0;
+  box-shadow: none;
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+.select-plan {
+  width: 100%;
+}
+
+/* Cart section */
+#cart {
+  background-color: var(--gray-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+#cart-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--gray);
+}
+
+#total-price {
+  font-weight: bold;
+  color: var(--secondary);
+  font-size: 1.25rem;
+}
+
+#checkout {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Registration form */
+#registrationForm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#registrationForm input {
+  margin-bottom: 1rem;
+}
+
+/* Date input styling */
+.date-input {
+  padding: 0.5rem;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Add to both member.css and shop_styles.css */
+.empty-cart {
+  text-align: center;
+  color: var(--gray);
+  padding: 20px;
+  list-style: none;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cart-items li {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+#cart-items li:last-child {
+  border-bottom: none;
+}
+
+.remove-item {
+  background: none;
+  border: none;
+  color: #ff0000;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.remove-item:hover {
+  color: #cc0000;
+}
+
+.form-description {
+  color: gray;
+  font-size: 0.85em;
+  margin-top: 4px;
+}

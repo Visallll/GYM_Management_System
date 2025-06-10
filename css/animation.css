@@ -1,0 +1,254 @@
+/* ===== account.css ===== */
+.account-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.account-actions {
+    display: flex;
+    gap: 1rem;
+}
+.account-container {
+    display: flex;
+    gap: 2rem;
+}
+.account-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+}
+.account-content {
+    flex-grow: 1;
+}
+.profile-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.profile-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.avatar-upload {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.member-since {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.membership-status {
+    margin-top: 1rem;
+}
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+.badge.premium {
+    background-color: #f6c23e;
+}
+.badge.standard {
+    background-color: #858796;
+}
+.badge.family {
+    background-color: #1cc88a;
+}
+.quick-stats {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+.stat-item {
+    text-align: center;
+}
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #4e73df;
+    display: block;
+    line-height: 1;
+}
+.stat-label {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+/* ===== account.css continued ===== */
+.account-section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.info-item {
+    margin-bottom: 1rem;
+}
+.info-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+.info-value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    word-break: break-word;
+}
+.membership-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid #4e73df;
+}
+.membership-info h4 {
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+.membership-expiry {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0 0 0.5rem;
+}
+.membership-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #4e73df;
+    margin: 0;
+}
+.activity-feed {
+    margin-top: 1rem;
+}
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+.activity-item:last-child {
+    border-bottom: none;
+}
+.activity-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+.activity-content {
+    flex-grow: 1;
+}
+.activity-content p {
+    margin: 0 0 0.25rem;
+}
+.activity-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: #aaa;
+    cursor: pointer;
+}
+.close-modal:hover {
+    color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .account-container {
+        flex-direction: column;
+    }
+    .account-sidebar {
+        width: 100%;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 576px) {
+    .account-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .quick-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .modal-content {
+        margin: 2rem auto;
+        width: 95%;
+    }
+}

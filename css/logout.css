@@ -1,0 +1,28 @@
+/* logout.css - Styles for logout page */
+#logout {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  #logout h2 {
+    margin-bottom: 2rem;
+    color: var(--primary);
+  }
+  
+  #logoutButton {
+    background-color: var(--danger);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #logoutButton:hover {
+    background-color: #f78383;
+    transform: scale(1.05);
+  }

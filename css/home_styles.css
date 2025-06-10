@@ -1,0 +1,71 @@
+/* home_styles.css - Specific styles for home page */
+#promotions {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+  }
+  
+  #promotions h2 {
+    color: white;
+    border-bottom-color: var(--accent);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .promo-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .promo-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .promo-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .promo-card h3 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+  }
+  
+  .promo-card p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .promo-card strong {
+    color: var(--secondary);
+  }
+  
+  /* Schedule table */
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+  }
+  
+  .schedule-table th, 
+  .schedule-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  
+  .schedule-table th {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .schedule-table tr:nth-child(even) {
+    background-color: var(--gray-light);
+  }
+  
+  .schedule-table tr:hover {
+    background-color: #e2e8f0;
+  }

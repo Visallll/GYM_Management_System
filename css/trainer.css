@@ -1,0 +1,146 @@
+/* trainer.css - Styles for trainers page */
+.trainers-section {
+    text-align: center;
+  }
+  
+  .trainer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .trainer-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 2px solid var(--gray-light);
+  }
+  
+  .trainer-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+  }
+  
+  .trainer-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1.5rem auto;
+    border: 3px solid var(--accent);
+  }
+  
+  .trainer-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .trainer-card p {
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+  }
+  
+  .trainer-card strong {
+    color: var(--primary);
+  }
+  
+  .trainer-card a {
+    color: var(--primary-light);
+    text-decoration: none;
+  }
+  
+  .trainer-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Feedback popup */
+  .feedback-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .feedback-popup.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .feedback-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gray);
+  }
+  
+  .close-btn:hover {
+    color: var(--danger);
+  }
+  
+  #feedbackForm {
+    margin-top: 1.5rem;
+  }
+  
+  #feedbackForm textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.75rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  #feedbackItems {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+  }
+  
+  #feedbackItems li {
+    background-color: var(--gray-light);
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+  }
+
+
+
+
+    /* Add to trainer.css */
+    .trainer-card {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        transition: all 0.5s ease;
+    }
+
+    .trainer-card:hover {
+        transform: rotateY(15deg);
+    }
+
+    .trainer-card img {
+        transform: translateZ(20px);
+    }

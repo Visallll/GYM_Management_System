@@ -1,0 +1,132 @@
+/* workout.css - Styles for workouts page */
+.workout-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .workout-categories li {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .workout-categories li:hover {
+    background-color: var(--primary-light);
+    transform: scale(1.05);
+  }
+  
+  .workout-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .workout-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .workout-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .workout-card video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .workout-card h4 {
+    padding: 1rem 1rem 0.5rem;
+    color: var(--primary);
+  }
+  
+  .workout-card p {
+    padding: 0 1rem 1rem;
+    color: var(--gray);
+  }
+  
+  /* Schedule table */
+  #workout-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+  }
+  
+  #workout-schedule th, 
+  #workout-schedule td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  
+  #workout-schedule th {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  #workout-schedule tr:nth-child(even) {
+    background-color: var(--gray-light);
+  }
+  
+  #workout-schedule tr:hover {
+    background-color: #e2e8f0;
+  }
+
+
+
+
+/* Video container for responsive embeds */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Category filtering */
+.workout-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.category-actions {
+  margin-bottom: 15px;
+}
+
+/* Workout gallery */
+.workout-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.workout-card {
+  transition: transform 0.3s ease;
+}
+
+.workout-card:hover {
+  transform: translateY(-5px);
+}
