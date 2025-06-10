@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Boss Gym - My Account</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="img/logo.jpg" alt="Big Boss Gym Logo" class="logo">
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+
+
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="member.html">Members</a></li>
+            <li><a href="trainer.html">Trainers</a></li>
+            <li><a href="workouts.html">Workouts</a></li>
+            <li><a href="shops.html">Shop</a></li>
+            <li><a href="payments.html">Payments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html" class="active">My Account</a></li>
+            <li><a href="logout.html">Logout</a></li>
+            <li><a href="chatbot.html">Gymbot</a></li>
+        </ul>
+        <button id="dark-toggle" class="dark-toggle">🌓</button>
+
+    </nav>
+
+    <main>
+        <section id="account" class="section">
+            <div class="account-header">
+                <h2>My Account</h2>
+                <div class="account-actions">
+                    <button id="edit-profile" class="btn btn-secondary">Edit Profile</button>
+                    <button id="change-password" class="btn btn-secondary">Change Password</button>
+                </div>
+            </div>
+            
+            <div class="account-container">
+                <div class="account-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <img src="img/profile.jpg" alt="Profile Avatar" id="profile-avatar">
+                            
+                        </div>
+                        <h3 id="profile-name">Loading...</h3>
+                        <p class="member-since" id="member-since">Member since: Loading...</p>
+                        <div class="membership-status">
+                            <span class="badge premium" id="membership-badge">Premium</span>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-stats">
+                        <div class="stat-item">
+                            <span class="stat-value" id="workouts-count">0</span>
+                            <span class="stat-label">Workouts</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="hours-trained">0</span>
+                            <span class="stat-label">Hours</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="calories-burned">0</span>
+                            <span class="stat-label">Calories</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="account-content">
+                    <div class="account-section">
+                        <h3>Personal Information</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Full Name</span>
+                                <span class="info-value" id="account-fullname">Loading...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value" id="account-email">Loading...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Password</span>
+                                <span class="info-value" id="account-password">••••••••</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone Number</span>
+                                <span class="info-value" id="account-phone">Loading...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Date of Birth</span>
+                                <span class="info-value" id="account-dob">Loading...</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Join Date</span>
+                                <span class="info-value" id="account-joindate">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="account-section">
+                        <h3>Membership Details</h3>
+                        <div class="membership-card">
+                            <div class="membership-info">
+                                <h4 id="membership-type">Premium Membership</h4>
+                                <p class="membership-expiry">Expires: <span id="membership-expiry">31/12/2024</span></p>
+                                <p class="membership-price">$<span id="membership-price">50</span>/month</p>
+                            </div>
+                            <button class="btn btn-accent" id="upgrade-membership">Upgrade</button>
+                        </div>
+                    </div>
+                    
+                    <div class="account-section">
+                        <h3>Recent Activities</h3>
+                        <div class="activity-feed" id="activity-feed">
+                            <div class="activity-item">
+                                <div class="activity-icon">🏋️</div>
+                                <div class="activity-content">
+                                    <p>Completed <strong>Strength Training</strong> workout</p>
+                                    <small class="activity-time">Today, 10:30 AM</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">🧘</div>
+                                <div class="activity-content">
+                                    <p>Attended <strong>Yoga Class</strong></p>
+                                    <small class="activity-time">Yesterday, 6:00 PM</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">💳</div>
+                                <div class="activity-content">
+                                    <p>Renewed <strong>Membership</strong></p>
+                                    <small class="activity-time">2 days ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Edit Profile Modal -->
+    <div id="edit-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="edit-profile-form">
+                <div class="form-group">
+                    <label for="edit-fullname">Full Name</label>
+                    <input type="text" id="edit-fullname" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-email">Email</label>
+                    <input type="email" id="edit-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-phone">Phone Number</label>
+                    <input type="tel" id="edit-phone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-dob">Date of Birth</label>
+                    <input type="text" id="edit-dob" class="form-control date-input" required>
+                </div>
+                <button type="submit" class="btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div id="change-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Change Password</h2>
+            <form id="change-password-form">
+                <div class="form-group">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm New Password</label>
+                    <input type="password" id="confirm-password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn">Update Password</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shops.html">Shop</a></li>
+                    <li><a href="member.html">Members</a></li>
+                    <li><a href="payments.html">Payments</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Account Details</h2>
+                <ul>
+                    <li><a href="account.html">My Profile</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Get in Touch</h2>
+                <ul>
+                    <li>Email: <a href="mailto:bigbozz1629@gmail.com">bunratnatepy@gmail.com</a></li>
+                    <li>Telegram: +855 11 434 668</li>
+                    <li>Contact No: +855 89 654 321</li>
+                    <li>Website: <a href="#">https://www.bigbozzgym.com</a></li>
+                </ul>
+                <div class="social-media">
+                    <a href="#"><img src="https://img.icons8.com/color/48/null/facebook-new.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://img.icons8.com/fluency/48/null/instagram-new.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="https://img.icons8.com/color/48/null/youtube-play.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Flatpickr for date inputs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    <script src="js/cart.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/sendDataToBackend.js"></script>
+</body>
+
+<script>
+  const toggle = document.getElementById('dark-toggle');
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+  const body = document.body;
+
+  // 🌗 Dark Mode
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+  });
+
+  // 📱 Hamburger Menu Toggle with ARIA
+  hamburger.addEventListener("click", () => {
+    const expanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", !expanded);
+    navLinks.classList.toggle("show");
+  });
+</script>
+
+</html>

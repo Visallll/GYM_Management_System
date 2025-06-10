@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Boss Gym - Trainers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/trainer.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="img/logo.jpg" alt="Big Boss Gym Logo" class="logo">
+        <ul>
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="member.html">Members</a></li>
+            <li><a href="trainer.html" class="active">Trainers</a></li>
+            <li><a href="workouts.html">Workouts</a></li>
+            <li><a href="shops.html">Shop</a></li>
+            <li><a href="payments.html">Payments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="account.html">My Account</a></li>
+            <li><a href="chatbot.html">Gymbot</a></li>
+            
+        </ul>
+        <button id="dark-toggle" class="dark-toggle">🌓</button>
+
+    </nav>
+
+    <main>
+        <section class="section">
+            <h2>Meet Our Trainers</h2>
+            <p>Our certified trainers are here to help you achieve your fitness goals with personalized training programs.</p>
+            
+            <div class="trainer-cards">
+                <!-- Trainer 1 -->
+                <div class="card trainer-card">
+                    <img src="img/Tepy.jpg" alt="Bun Ratnatepy">
+                    <div class="card-body">
+                        <h3>Bun Ratnatepy</h3>
+                        <p><strong>Experience:</strong> 2 years</p>
+                        <p><strong>Specialty:</strong> Yoga</p>
+                        <p><strong>Schedule:</strong> Mon-Fri: 6AM - 12PM</p>
+                        <p><strong>Contact:</strong> 
+                            <a href="mailto:bunratnatepy@gmail.com">bunratnatepy@gmail.com</a>
+                        </p>
+                        <p><strong>Rating:</strong> ⭐ 4.8 / 5</p>
+                        <button class="btn feedback-btn" data-trainer="Bun Ratantepy">Leave Feedback</button>
+                    </div>
+                </div>
+
+                <!-- Trainer 2 -->
+                <div class="card trainer-card">
+                    <img src="img/Visal.jpg" alt="Chhin Visal">
+                    <div class="card-body">
+                        <h3>Chhin Visal</h3>
+                        <p><strong>Experience:</strong> 8 years</p>
+                        <p><strong>Specialty:</strong> Cardio &amp; Weight Loss</p>
+                        <p><strong>Schedule:</strong> Tue-Thu: 10AM - 6PM</p>
+                        <p><strong>Contact:</strong> 
+                            <a href="mailto:chhinvisal@gmail.com">chhinvisal@gmail.com</a>
+                        </p>
+                        <p><strong>Rating:</strong> ⭐ 4.9 / 5</p>
+                        <button class="btn feedback-btn" data-trainer="Chhin Visal">Leave Feedback</button>
+                    </div>
+                </div>
+
+                <!-- Trainer 3 -->
+                <div class="card trainer-card">
+                    <img src="img/Win.jpg" alt="HAYSAVIN RONGRAVIDWIN">
+                    <div class="card-body">
+                        <h3>HAYSAVIN RONGRAVIDWIN</h3>
+                        <p><strong>Experience:</strong> 5 years</p>
+                        <p><strong>Specialty:</strong> Strength Training</p>
+                        <p><strong>Schedule:</strong> Mon-Sun: 1AM - 5PM</p>
+                        <p><strong>Contact:</strong> 
+                            <a href="mailto:winwin@gmail.com">winwin@gmail.com</a>
+                        </p>
+                        <p><strong>Rating:</strong> ⭐ 4.9 / 5</p>
+                        <button class="btn feedback-btn" data-trainer="HAYSAVIN RONGRAVIDWIN">Leave Feedback</button>
+                    </div>
+                </div>
+
+                <!-- Trainer 4 -->
+                <div class="card trainer-card">
+                    <img src="img/Sithai.jpg" alt="HOUN Sithai">
+                    <div class="card-body">
+                        <h3>HOUN Sithai</h3>
+                        <p><strong>Experience:</strong> 1 years</p>
+                        <p><strong>Specialty:</strong> Pilates</p>
+                        <p><strong>Schedule:</strong> Wed-Fri: 7AM - 2PM</p>
+                        <p><strong>Contact:</strong> 
+                            <a href="mailto:sithai@example.com">sithai@example.com</a>
+                        </p>
+                        <p><strong>Rating:</strong> ⭐ 4.0 / 5</p>
+                        <button class="btn feedback-btn" data-trainer="HOUN Sithai">Leave Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Feedback Popup -->
+    <div id="feedback-popup" class="feedback-popup">
+        <div class="feedback-content">
+            <span class="close-btn">&times;</span>
+            <h2>Feedback for <span id="trainerNameDisplay"></span></h2>
+            
+            <!-- Existing Feedback -->
+            <div id="feedbackList">
+                <h3>Existing Feedback:</h3>
+                <ul id="feedbackItems"></ul>
+            </div>
+
+            <!-- Submit New Feedback -->
+            <h3>Leave Your Feedback</h3>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="rating">Rating (1-5):</label>
+                    <input type="number" id="rating" min="1" max="5" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comment">Your Feedback:</label>
+                    <textarea id="comment" rows="4" class="form-control" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+    <script src="js/trainer.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/sendDataToBackend.js"></script>
+</body>
+</html>

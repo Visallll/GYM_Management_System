@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Boss Gym - Mini Shop</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/shop_styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="img/logo.jpg" alt="Big Boss Gym Logo" class="logo">
+    <ul>
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="member.html">Members</a></li>
+      <li><a href="trainer.html">Trainers</a></li>
+      <li><a href="workouts.html">Workouts</a></li>
+      <li><a href="shops.html" class="active">Shop</a></li>
+      <li><a href="payments.html">Payments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="account.html">My Account</a></li>
+      <li><a href="chatbot.html">Gymbot</a></li>
+      
+    </ul>
+    <button id="dark-toggle" class="dark-toggle">🌓</button>
+
+  </nav>
+
+  <main>
+    <section id="promo" class="section">
+      <h2>Welcome to Our Mini Shop!</h2>
+      <p>🛍️ Fuel your fitness journey with the best gear, supplements, and essentials! 🏋️‍♂️💪</p>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h3>🛒 What's in Store?</h3>
+          <ul>
+            <li>✅ High-quality gym apparel</li>
+            <li>✅ Premium supplements &amp; protein powders</li>
+            <li>✅ Workout accessories &amp; gear</li>
+            <li>✅ Healthy snacks &amp; energy boosters</li>
+          </ul>
+          <p class="mt-2">💥 Exclusive Deals Available! Grab yours now!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <!-- Beverages Category -->
+      <div class="shop-category">
+        <h3>Beverages</h3>
+        <div class="shop-list">
+          <div class="card">
+            <img src="img/drink/water.jpg" alt="Water" class="card-img">
+            <div class="card-body">
+              <h4>Water</h4>
+              <p class="price">$0.25</p>
+              <button class="btn add-to-cart" data-name="Water" data-price="0.25">Add to Cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/drink/Monster_Energy_drink.jpg" alt="Monster Energy" class="card-img">
+            <div class="card-body">
+              <h4>Monster Energy</h4>
+              <p class="price">$5.99</p>
+              <button class="btn add-to-cart" data-name="Monster Energy" data-price="5.99">Add to Cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/drink/Gold Standard.jpg" alt="Gold Standard Whey" class="card-img">
+            <div class="card-body">
+              <h4>Gold Standard Whey</h4>
+              <p class="price">$75</p>
+              <button class="btn add-to-cart" data-name="Gold Standard" data-price="75">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Café Category -->
+      <div class="shop-category">
+        <h3>Coffee</h3>
+        <div class="shop-list">
+          <div class="card">
+            <img src="img/cafe/blackCoffee.jpg" alt="Black Coffee" class="card-img">
+            <div class="card-body">
+              <h4>Black Coffee</h4>
+              <p class="price">$2.50</p>
+              <div class="form-group">
+                <label for="sugar-blackCoffee">Sugar:</label>
+                <select id="sugar-blackCoffee" class="form-control sugar-option">
+                  <option value="No Sugar">No Sugar</option>
+                  <option value="Less Sugar">Less Sugar</option>
+                  <option value="Medium Sugar">Medium Sugar</option>
+                  <option value="More Sugar">More Sugar</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="ice-blackCoffee">Ice:</label>
+                <select id="ice-blackCoffee" class="form-control ice-option">
+                  <option value="No Ice">No Ice</option>
+                  <option value="Less Ice">Less Ice</option>
+                  <option value="Medium Ice">Medium Ice</option>
+                  <option value="More Ice">More Ice</option>
+                </select>
+              </div>
+              <button class="btn add-to-cart" data-name="Black Coffee" data-price="2.50">Add to Cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/cafe/iceLate.jpg" alt="Ice Latte" class="card-img">
+            <div class="card-body">
+              <h4>Ice Latte</h4>
+              <p class="price">$3.00</p>
+              <div class="form-group">
+                <label for="sugar-IceLatte">Sugar:</label>
+                <select id="sugar-IceLatte" class="form-control sugar-option">
+                  <option value="No Sugar">No Sugar</option>
+                  <option value="Less Sugar">Less Sugar</option>
+                  <option value="Medium Sugar">Medium Sugar</option>
+                  <option value="More Sugar">More Sugar</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="ice-IceLatte">Ice:</label>
+                <select id="ice-IceLatte" class="form-control ice-option">
+                  <option value="No Ice">No Ice</option>
+                  <option value="Less Ice">Less Ice</option>
+                  <option value="Medium Ice">Medium Ice</option>
+                  <option value="More Ice">More Ice</option>
+                </select>
+              </div>
+              <button class="btn add-to-cart" data-name="Ice Latte" data-price="3.00">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gym Equipment Category -->
+      <div class="shop-category">
+        <h3>Gym Equipment</h3>
+        <div class="shop-list">
+          <div class="card">
+            <img src="img/gym/PushUpBar.jpg" alt="PushUpBar" class="card-img">
+            <div class="card-body">
+              <h4>PushUpBar</h4>
+              <p class="price">$5.99</p>
+              <button class="btn add-to-cart" data-name="PushUpBar" data-price="5.99">Add to Cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/yoga mat.jpg" alt="Yoga Mat" class="card-img">
+            <div class="card-body">
+              <h4>Yoga Mat</h4>
+              <p class="price">$7</p>
+              <button class="btn add-to-cart" data-name="Yoga Mat" data-price="7">Add to Cart</button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/gym/kettleball.jpg" alt="Kettleball" class="card-img">
+            <div class="card-body">
+              <h4>Kettleball</h4>
+              <p class="price">$3.99</p>
+              <button class="btn add-to-cart" data-name="Kettleball" data-price="3.99">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="section">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p class="mt-2"><strong>Total:</strong> $<span id="total-price">0.00</span></p>
+      <button id="checkout" class="btn btn-accent">Proceed to Payment</button>
+    </section>
+  </main>
+  <script src="js/cart.js"></script>
+  <script src="js/shop_script.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/sendDataToBackend.js"></script>
+</body>
+</html>

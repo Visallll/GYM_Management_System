@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GymBot Assistant</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/chatbot.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <img src="img/logo.jpg" alt="Big Boss Gym Logo" class="logo" />
+  <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+
+  <ul id="nav-links" class="nav-links">
+    <li><a href="index.html">About</a></li>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="member.html">Members</a></li>
+    <li><a href="trainer.html">Trainers</a></li>
+    <li><a href="workouts.html">Workouts</a></li>
+    <li><a href="shops.html">Shop</a></li>
+    <li><a href="payments.html">Payments</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="account.html">My Account</a></li>
+  </ul>
+  <button id="dark-toggle" class="dark-toggle">🌓</button>
+</nav>
+
+<!-- Chatbot Section -->
+<main class="chatbot-page">
+  <section class="chat-section">
+    <h2>🤖 Chat with GymBot</h2>
+    <div class="chat-window">
+      <div id="chat-body" class="chat-body"></div>
+
+      <!-- Chat Prompt Buttons -->
+      <div id="chat-prompts">
+        <button class="chat-prompt">💳 How do I make a payment?</button>
+        <button class="chat-prompt">🏷️ What are the membership types?</button>
+        <button class="chat-prompt">💸 How much does it cost to join?</button>
+        <button class="chat-prompt">📅 Can I see the class schedule?</button>
+        <button class="chat-prompt">🏋️‍♂️ Tell me about the trainers</button>
+        <button class="chat-prompt">🏋️‍♂️ What classes do you offer?</button>
+        <button class="chat-prompt">📞 How can I contact support?</button>
+        <button class="chat-prompt">🕒 What are your opening hours?</button>
+        <button class="chat-prompt">📍 Where is the gym located?</button>
+      </div>
+
+      <!-- Chat Input -->
+      <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Ask me anything..." />
+        <button id="chat-send">Send</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- JavaScript -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const chatBody = document.getElementById("chat-body");
+    const chatInput = document.getElementById("chat-input");
+    const chatSend = document.getElementById("chat-send");
+
+    function appendMessage(sender, text) {
+      const msg = document.createElement("div");
+      msg.className = `chat-msg ${sender}`;
+      msg.innerHTML = text;
+      chatBody.appendChild(msg);
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function sendMessage(msg) {
+      if (!msg) return;
+
+      appendMessage("user", msg);
+      chatInput.value = "";
+
+      const typing = document.createElement("div");
+      typing.className = "chat-msg bot typing";
+      typing.textContent = "GymBot is typing...";
+      chatBody.appendChild(typing);
+      chatBody.scrollTop = chatBody.scrollHeight;
+
+      // FIXED: Now uses GET with encoded query string
+      fetch(`http://localhost:5000/chatbot?msg=${encodeURIComponent(msg)}`)
+        .then((res) => res.text())
+        .then((reply) => {
+          typing.remove();
+          appendMessage("bot", reply.trim());
+        })
+        .catch(() => {
+          typing.remove();
+          appendMessage("bot", "⚠️ Chatbot server error.");
+        });
+    }
+
+    chatSend.addEventListener("click", () => sendMessage(chatInput.value.trim()));
+    chatInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") sendMessage(chatInput.value.trim());
+    });
+
+    document.querySelectorAll(".chat-prompt").forEach((btn) => {
+      btn.addEventListener("click", () => sendMessage(btn.innerText));
+    });
+
+    appendMessage("bot", "🏋️‍♂️ Welcome to Big Boss Gym! I'm GymBot.");
+    appendMessage("bot", "🤖 You can ask about membership, pricing, classes, trainers, and more!");
+
+    // 🌗 Dark Mode
+    const toggle = document.getElementById("dark-toggle");
+    const body = document.body;
+    if (localStorage.getItem("theme") === "dark") body.classList.add("dark");
+
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+    });
+
+    // 📱 Hamburger Menu Toggle
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+    hamburger.addEventListener("click", () => {
+      const expanded = hamburger.getAttribute("aria-expanded") === "true";
+      hamburger.setAttribute("aria-expanded", !expanded);
+      navLinks.classList.toggle("show");
+    });
+  });
+</script>
+
+</body>
+</html>

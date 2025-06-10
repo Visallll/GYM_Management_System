@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout - Big Boss Gym</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/logout.css">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="img/logo.jpg" alt="Big Boss Gym Logo" class="logo">
+    <ul>
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="member.html">Members</a></li>
+      <li><a href="trainer.html">Trainers</a></li>
+      <li><a href="workouts.html">Workouts</a></li>
+      <li><a href="shops.html">Shop</a></li>
+      <li><a href="payments.html">Payments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="account.html">My Account</a></li>
+      <li><a href="chatbot.html">Gymbot</a></li>
+      
+    </ul>
+    <button id="dark-toggle" class="dark-toggle">🌓</button>
+
+  </nav>
+
+  <main>
+    <section id="logout" class="section">
+      <h2>Are you sure you want to log out?</h2>
+      <div class="flex justify-between mt-4" style="max-width: 300px; margin: 0 auto;">
+        <button id="logoutButton" class="btn btn-danger">Yes, Logout</button>
+        <a href="home.html" class="btn">Cancel</a>
+      </div>
+    </section>
+  </main>
+  <script src="js/cart.js"></script>
+  <script src="js/logout.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/sendDataToBackend.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Boss Gym - Workouts</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/workout.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="img/logo.jpg" alt="Big Boss Gym Logo" class="logo">
+        <ul>
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="member.html">Members</a></li>
+            <li><a href="trainer.html">Trainers</a></li>
+            <li><a href="workouts.html" class="active">Workouts</a></li>
+            <li><a href="shops.html">Shop</a></li>
+            <li><a href="payments.html">Payments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="account.html">My Account</a></li>
+            <li><a href="chatbot.html">Gymbot</a></li>
+        </ul>
+        <button id="dark-toggle" class="dark-toggle">🌓</button>
+
+    </nav>
+
+    <main>
+        <!-- Workout Welcome Section -->
+        <section id="workouts" class="section">
+            <h2>Welcome to Our Workout Sessions</h2>
+            <p>Explore our range of workout classes designed for every fitness level. Whether you're a beginner or an advanced athlete, we have something for everyone.</p>
+        </section>
+
+        <!-- Workout Categories Section -->
+        <section id="workout-categories" class="section">
+            <h2>Workout Categories</h2>
+            
+            <ul class="workout-categories">
+                <li data-category="all" class="active">All Workouts</li>
+                <li data-category="strength">💪 Strength Training</li>
+                <li data-category="cardio">🏃 Cardio</li>
+                <li data-category="yoga">🧘 Yoga</li>
+                <li data-category="hiit">🔥 HIIT</li>
+                <li data-category="zumba">💃 Zumba</li>
+                <li data-category="crossfit">🏋️ CrossFit</li>
+            </ul>
+        </section>
+        
+        <!-- Featured Workouts Section -->
+        <section id="featured-workouts" class="section">
+            <h2>Featured Workouts</h2>
+            <div class="workout-gallery">
+                <!-- Yoga -->
+                <div class="card workout-card" data-categories="yoga">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JoYUYWQj4wo?si=Ue1BBF3UptZW19t4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h4>Yoga Flow</h4>
+                        <p>Improve flexibility and reduce stress with guided yoga classes.</p>
+                        <button class="btn mt-2">Book Session</button>
+                    </div>
+                </div>
+
+                <!-- HIIT -->
+                <div class="card workout-card" data-categories="hiit">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ml6cT4AZdqI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h4>HIIT Blast</h4>
+                        <p>High-intensity interval training to maximize calorie burn.</p>
+                        <button class="btn mt-2">Book Session</button>
+                    </div>
+                </div>
+
+                <!-- Strength Training -->
+                <div class="card workout-card" data-categories="strength">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/GcZJhNi2yOM?si=wHHVW3vk5ZSswwMA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h4>Strength Training</h4>
+                        <p>Build muscle and increase strength with our expert-led sessions.</p>
+                        <button class="btn mt-2">Book Session</button>
+                    </div>
+                </div>
+
+                <!-- Cardio -->
+                <div class="card workout-card" data-categories="cardio">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/CIxNJbit9BA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h4>Cardio Burn</h4>
+                        <p>Boost your endurance and cardiovascular health.</p>
+                        <button class="btn mt-2">Book Session</button>
+                    </div>
+                </div>
+
+                <!-- Zumba -->
+                <div class="card workout-card" data-categories="zumba">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/mZeFvX3ALKY?si=2sEzHl0kWgbQH3gf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h4>Zumba Party</h4>
+                        <p>Dance your way to fitness with this fun, high-energy workout.</p>
+                        <button class="btn mt-2">Book Session</button>
+                    </div>
+                </div>
+
+                <!-- CrossFit -->
+                <div class="card workout-card" data-categories="crossfit">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/tzD9BkXGJ1M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h4>CrossFit Challenge</h4>
+                        <p>Push your limits with this intense functional fitness program.</p>
+                        <button class="btn mt-2">Book Session</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workout Schedule Table -->
+        <section id="workout-schedule" class="section">
+            <h2>Weekly Workout Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Morning</th>
+                        <th>Evening</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Yoga - 8:00 AM</td>
+                        <td>Strength Training - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Cardio - 9:00 AM</td>
+                        <td>HIIT - 7:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Zumba - 8:00 AM</td>
+                        <td>CrossFit - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>HIIT - 9:00 AM</td>
+                        <td>Yoga - 7:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Cardio - 8:00 AM</td>
+                        <td>Strength Training - 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Yoga - 9:00 AM</td>
+                        <td>Zumba - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td colspan="2">Rest & Recovery</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="js/cart.js"></script>
+    <script src="js/workout.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/sendDataToBackend.js"></script>
+</body>
+</html>

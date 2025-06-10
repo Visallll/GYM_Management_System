@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Boss Gym - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home_styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="img/logo.jpg" alt="Big Boss Gym Logo" class="logo">
+        <ul>
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="member.html">Members</a></li>
+            <li><a href="trainer.html">Trainers</a></li>
+            <li><a href="workouts.html">Workouts</a></li>
+            <li><a href="shops.html">Shop</a></li>
+            <li><a href="payments.html">Payments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="account.html">My Account</a></li>
+            <li><a href="chatbot.html">Gymbot</a></li>
+            
+        </ul>
+        <button id="dark-toggle" class="dark-toggle">🌓</button>
+
+    </nav>
+
+    <main>
+        <!-- Add this to your home.html -->
+        <section class="section" id="stats">
+            <h2>🏋️‍♂️ Real-Time Gym Stats</h2>
+            <div class="live-stats">
+                <div class="stat-card pulse">
+                    <h3>Members Working Out Now</h3>
+                    <div class="counter" data-target="47">0</div>
+                </div>
+                <div class="stat-card pulse">
+                    <h3>Calories Burned Today</h3>
+                    <div class="counter" data-target="12890">0</div>kcal
+                </div>
+                <div class="stat-card pulse">
+                    <h3>Trainers Available</h3>
+                    <div class="counter" data-target="6">0</div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="promotions" class="section">
+            <h2>🔥 Sweat now, shine later! Join today!</h2>
+            <div class="promo-cards">
+                <div class="promo-card">
+                    <h3>New Year Special Offer!</h3>
+                    <p>Join now and get <strong>50% off</strong> your first 3 months. Limited time only!</p>
+                    <button class="btn btn-accent mt-2">Claim Offer</button>
+                </div>
+                <div class="promo-card">
+                    <h3>Bring a Friend & Get Rewards</h3>
+                    <p>Refer a friend and receive a <strong>free month</strong> membership!</p>
+                    <button class="btn btn-accent mt-2">Refer Now</button>
+                </div>
+                <div class="promo-card">
+                    <h3>Personal Training Discount</h3>
+                    <p>Sign up for personal training sessions and get a <strong>20% discount</strong> on all packages.</p>
+                    <button class="btn btn-accent mt-2">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="section">
+            <h2>📅 Gym Schedule & Events</h2>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Opening Hours</th>
+                        <th>Special Events</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday - Friday</td>
+                        <td>6:00 AM - 10:00 PM</td>
+                        <td>Evening Zumba Classes at 6:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>8:00 AM - 8:00 PM</td>
+                        <td>HIIT Bootcamp at 10:00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>8:00 AM - 6:00 PM</td>
+                        <td>Yoga & Meditation Workshop at 9:00 AM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="js/cart.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/sendDataToBackend.js"></script>
+</body>
+</html>

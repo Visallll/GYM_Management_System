@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Boss Gym - Members</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/member.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="img/logo.jpg" alt="Big Boss Gym Logo" class="logo">
+    <ul>
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="member.html" class="active">Members</a></li>
+      <li><a href="trainer.html">Trainers</a></li>
+      <li><a href="workouts.html">Workouts</a></li>
+      <li><a href="shops.html">Shop</a></li>
+      <li><a href="payments.html">Payments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="account.html">My Account</a></li>
+      <li><a href="chatbot.html">Gymbot</a></li>
+    </ul>
+    <button id="dark-toggle" class="dark-toggle">🌓</button>
+
+  </nav>
+
+  <main>
+    <section id="member" class="section">
+      <h2>Start Your Fitness Journey With Us!</h2>
+      <p>Choose from our flexible membership options to find the perfect fit for your fitness goals.</p>
+    </section>
+
+    <section id="membership" class="section">
+      <h2>Select Your Membership Plan</h2>
+      <div class="membership-options">
+        <div class="card">
+          <div class="card-body">
+            <h4>Standard Membership</h4>
+            <p class="price">$30/month</p>
+            <ul>
+              <li>Access to gym facilities</li>
+              <li>Locker room usage</li>
+              <li>Standard workout equipment</li>
+              <li>No Time limitation</li>
+            </ul>
+            <button class="btn select-plan" data-name="Standard Membership" data-price="30">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4>Premium Membership</h4>
+            <p class="price">$50/month</p>
+            <ul>
+              <li>All Basic Membership benefits</li>
+              <li>Access to group fitness classes</li>
+              <li>Sauna and steam room access</li>
+              <li>Discounts on personal training</li>
+            </ul>
+            <button class="btn select-plan" data-name="Premium Membership" data-price="50">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4>Family Membership</h4>
+            <p class="price">$80/month</p>
+            <ul>
+              <li>All Premium benefits</li>
+              <li>For up to 4 members</li>
+              <li>Family workout sessions</li>
+              <li>Priority class booking</li>
+            </ul>
+            <button class="btn select-plan" data-name="Family Membership" data-price="80">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cart" class="section">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p class="mt-2"><strong>Total:</strong> $<span id="total-price">0.00</span></p>
+      <button id="checkout" class="btn btn-accent">Proceed to Payment</button>
+    </section>
+
+    <section id="registration" class="section">
+      <h2>Register for Membership</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" required>
+          <div class="form-description">Password must be at least 6 characters long.</div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="text" id="dob" class="form-control date-input" required>
+        </div>
+        <div class="form-group">
+          <label for="join_date">Join Date</label>
+          <input type="text" id="join_date" class="form-control date-input">
+        </div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/member.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/sendDataToBackend.js"></script>
+</body>
+</html>
